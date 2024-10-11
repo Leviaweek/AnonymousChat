@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.header__title {
+    color: #b4b4b4;
+    font-style: normal;
+    font-size: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header__avatar {
+    display: flex;
+    height: 40px;
+    width: 40px;
+}
+
+.header__avatar img {
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+

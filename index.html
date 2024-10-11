@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="/styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="/styles/header.css" rel="stylesheet" type="text/css" />
+    <link href="/styles/footer.css" rel="stylesheet" type="text/css" />
+    <script src="script.js" type="module"></script>
+    <title>Anonymous Chat</title>
+</head>
+
+<body>
+    <div class="modal" id="modal" data-enabled="false"></div>
+    <div class="app-container">
+        <div class="side-panel" id="side-panel" data-enabled="false">
+            <div class="toggle-button-wrapper">
+                <button class="side-panel-toggle" id="side-panel-disable"></button>
+                <label for="side-panel-disable">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-lg mx-2 text-token-text-secondary"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 8C3 7.44772 3.44772 7 4 7H20C20.5523 7 21 7.44772 21 8C21 8.55228 20.5523 9 20 9H4C3.44772 9 3 8.55228 3 8ZM3 16C3 15.4477 3.44772 15 4 15H14C14.5523 15 15 15.4477 15 16C15 16.5523 14.5523 17 14 17H4C3.44772 17 3 16.5523 3 16Z" fill="currentColor"></path></svg>
+                </label>
+            </div>
+        </div>
+        <div class="main-screen">
+            <div class="header">
+                <div class="header__side-panel-toggle">
+                    <div class="toggle-button-wrapper">
+                        <button id="side-panel-enable" class="side-panel-toggle"></button>
+                        <label for="side-panel-enable">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-lg mx-2 text-token-text-secondary"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 8C3 7.44772 3.44772 7 4 7H20C20.5523 7 21 7.44772 21 8C21 8.55228 20.5523 9 20 9H4C3.44772 9 3 8.55228 3 8ZM3 16C3 15.4477 3.44772 15 4 15H14C14.5523 15 15 15.4477 15 16C15 16.5523 14.5523 17 14 17H4C3.44772 17 3 16.5523 3 16Z" fill="currentColor"></path></svg>
+                        </label>
+                    </div>
+                </div>
+                <div class="header__title">
+                    <h1>Anonymous Chat</h1>
+                </div>
+                <div class="header__avatar">
+                    <img src="avatar.jpg">
+                </div>
+            </div>
+            <div class="main">
+                <div class="chat-messages-container" id="chat-messages-container">
+
+                </div>
+                <div class="main-input-container">
+                    <form class="main-input-container__form" id="input-form">
+                        <div class="main-input-container__form__file">
+                            <label for="file-upload">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 7C9 4.23858 11.2386 2 14 2C16.7614 2 19 4.23858 19 7V15C19 18.866 15.866 22 12 22C8.13401 22 5 18.866 5 15V9C5 8.44772 5.44772 8 6 8C6.55228 8 7 8.44772 7 9V15C7 17.7614 9.23858 20 12 20C14.7614 20 17 17.7614 17 15V7C17 5.34315 15.6569 4 14 4C12.3431 4 11 5.34315 11 7V15C11 15.5523 11.4477 16 12 16C12.5523 16 13 15.5523 13 15V9C13 8.44772 13.4477 8 14 8C14.5523 8 15 8.44772 15 9V15C15 16.6569 13.6569 18 12 18C10.3431 18 9 16.6569 9 15V7Z" fill="currentColor"></path></svg>
+                            </label>
+                            <input id="file-upload" type="file">
+                        </div>
+                        <div class="main-input-container__form__text">
+                            <input id="message-input" type="text" placeholder="Input your text" autocomplete="off">
+                        </div>
+                        <div class="main-input-container__form__button">
+                            <button id="send-message-button" type="submit" disabled>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-2xl"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.1918 8.90615C15.6381 8.45983 16.3618 8.45983 16.8081 8.90615L21.9509 14.049C22.3972 14.4953 22.3972 15.2189 21.9509 15.6652C21.5046 16.1116 20.781 16.1116 20.3347 15.6652L17.1428 12.4734V22.2857C17.1428 22.9169 16.6311 23.4286 15.9999 23.4286C15.3688 23.4286 14.8571 22.9169 14.8571 22.2857V12.4734L11.6652 15.6652C11.2189 16.1116 10.4953 16.1116 10.049 15.6652C9.60265 15.2189 9.60265 14.4953 10.049 14.049L15.1918 8.90615Z" fill="currentColor"></path></svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="footer__title">
+                    <h2>Andrii Popov</h2>
+                </div>
+            </div>
+        </div>
+        <template id="message-template">
+            <div class="message-wrapper">
+                <div class="message" data-id>
+                    <p class="message__text">
+                        temp text;
+                    </p>
+                    <p class="message__time">
+                        temp time
+                    </p>
+                </div>
+            </div>
+        </template>
+    </div>
+</body>
+
+</html>

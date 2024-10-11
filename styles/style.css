@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #ececec;
+    background-color: #212121;
+}
+
+.app-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.side-panel{
+    display: flex;
+    background-color: #171717;
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    z-index: 1;
+    padding: 15px;
+}
+
+.header__side-panel-toggle, .toggle-button-wrapper {
+    display: none;
+}
+
+.side-panel-toggle {
+    display: none;
+}
+
+.side-panel-toggle label {
+    cursor: pointer;
+}
+
+.main-screen{
+    display: flex;
+    flex: 100%;
+    height: 100%;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background-color: black;
+    z-index: 0;
+}
+
+
+@media only screen and (max-width: 768px)
+{
+    .side-panel {
+        display: none;
+        position: absolute;
+    }
+
+    .header__side-panel-toggle, .toggle-button-wrapper {
+        display: block;
+    }
+
+    .side-panel-disable {
+        display: block;
+    }
+
+    .side-panel[data-enabled="true"]
+    {
+        display: flex;
+    }
+    .modal[data-enabled="true"]
+    {
+        display: block;
+    }
+    .side-panel[data-enabled="false"]
+    {
+        display: none;
+    }
+    .modal[data-enabled="false"]
+    {
+        display: none;
+    }
+}

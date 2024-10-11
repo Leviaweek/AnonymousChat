@@ -1,0 +1,16 @@
+{
+  "name": "anonymouschat",
+  "version": "1.0.0",
+  "description": "My anonymous chattttttttt",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrii Popov",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "eslint": "^9.11.1",
+    "globals": "^15.9.0"
+  }
+}

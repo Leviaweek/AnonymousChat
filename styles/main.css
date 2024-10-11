@@ -1,0 +1,119 @@
+.main {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+    overflow: auto;
+}
+
+.main-input-container {
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #2f2f2f;
+    display: flex;
+    flex-direction: column;
+    max-width: 750px;
+    width: 100%;
+}
+
+.main-input-container__form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-input-container__form__text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+}
+.main-input-container__form__file label {
+    display: flex;
+    padding: 3px;
+    padding-right: 8px;
+}
+
+.main-input-container__form__text input[type="text"] {
+    caret-color: white;
+    color: white;
+    height: 90%;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    background-color: #2f2f2f;
+}
+
+.main-input-container__form__text input[type="text"]::placeholder {
+    color: #b4b4b4;
+}
+
+.main-input-container__form__file input[type="file"] {
+    display: none;
+}
+
+.main-input-container__form__button {
+    display: flex;
+}
+
+.main-input-container__form__button button {
+    border-radius: 50%;
+    display: flex;
+    border: 0;
+}
+
+.main-input-container__form__button button:enabled {
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.main-input-container__form__button button:enabled:hover {
+    background-color: #cccccc;
+}
+
+.chat-messages-container {
+    max-width: 750px;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: auto;
+}
+
+.message-wrapper {
+    display: grid;
+}
+
+
+.message-wrapper .message {
+    background-color: #2f2f2f;
+    display: grid;
+    overflow-wrap: anywhere;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    max-width: 60%;
+}
+
+
+.message-wrapper .message[data-sender-client] {
+    justify-self: end;
+}
+
+.message p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.message__time {
+    justify-self: end;
+    font-size: 11px;
+    user-select: none;
+}
