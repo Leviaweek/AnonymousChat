@@ -1,0 +1,106 @@
+
+
+
+.auth-form{
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    width: 100%;
+}
+.auth-menu{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-menu p{
+    font-size: 16px;
+}
+
+.auth-menu .auth-menu__login, .auth-menu__header, .auth-menu__password, .auth-menu__submit, .auth-menu__error{
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.auth-menu__error[data-is-disabled]{
+    display: none;
+}
+
+.auth-menu__error__text p {
+    font-size: 16px;
+}
+
+.auth-menu input{
+    background-color: #2a2a2a;
+    outline: none;
+    border: 1px solid #333333;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: white;
+    width: 100%;
+}
+
+.auth-menu input:focus{
+    background-color: #2f2f2f;
+    border-color: #444444;
+}
+
+.auth-menu .auth-menu__submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.auth-menu .auth-menu__submit button{
+    font-size: 16px;
+    padding: 7px;
+    width: 75%;
+    background-color: #2a2a2a;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    color: white
+}
+
+.auth-menu .auth-menu__submit button:active{
+    background-color: #2f2f2f;
+    border-color: #444444;
+}
+
+
+.auth-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.change-menu{
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    max-width: 250px;
+}
+
+.change-menu button{
+    color: white;
+    font-size: 16px;
+    background-color: #2f2f2f;
+    padding: 7px;
+    border: 1px solid #333333;
+    width: 100%;
+    margin: 7px;
+    width: 100%;
+}
+
+.change-menu button:active{
+    background-color: #2f2f2f;
+    border-color: #444444;
+}

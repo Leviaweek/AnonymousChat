@@ -1,0 +1,19 @@
+.join-random-chat {
+    max-width: 300px;
+    width: 100%;
+}
+
+.join-random-chat__button{
+    font-size: 16px;
+    padding: 7px;
+    width: 100%;
+    background-color: #2a2a2a;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    color: white
+}
+
+.join-random-chat .join-random-chat__button:active{
+    background-color: #2f2f2f;
+    border-color: #444444;
+}

@@ -24,6 +24,12 @@ body {
     width: 100%;
 }
 
+.app-container[data-is-authorize]{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .side-panel{
     display: flex;
     background-color: #171717;

@@ -8,13 +8,93 @@
     <link href="/styles/main.css" rel="stylesheet" type="text/css" />
     <link href="/styles/header.css" rel="stylesheet" type="text/css" />
     <link href="/styles/footer.css" rel="stylesheet" type="text/css" />
-    <script src="script.js" type="module"></script>
+    <link href="/styles/auth-menu.css" rel="stylesheet" type="text/css" />
+    <link href="/styles/register-menu.css" rel="stylesheet" type="text/css" />
+    <link href="/styles/join-random.css" rel="stylesheet" type="text/css" />
+
+
+    <script src="dist\bundle.js" type="module"></script>
     <title>Anonymous Chat</title>
 </head>
 
 <body>
     <div class="modal" id="modal" data-enabled="false"></div>
-    <div class="app-container">
+    <div class="app-container" id="app-container" data-is-authorize>
+        
+
+    </div>
+
+    <template id="auth-template">
+        <div id="change-menu" class="change-menu">
+            <button id="change-button">Register</button>
+        </div>
+        <div id="auth-wrapper" class="auth-wrapper"></div>
+    </template>
+
+    <template id="join-random-chat-template">
+        <div id="join-random-chat" class="join-random-chat">
+            <button class="join-random-chat__button">Join</button>
+        </div>
+    </template>
+
+    <template id="auth-menu-template">
+        <div id="auth-menu" class="auth-menu">
+            <form id="auth-form" class="auth-form">
+                <div class="auth-menu__header">
+                    <p>Login</p>
+                </div>
+                <div class="auth-menu__login">
+                    <input type="text" name="login" required minlength="3" placeholder="login">
+                </div>
+                <div class="auth-menu__password">
+                    <input type="text" name="password" required minlength="6" placeholder="password">
+                </div>
+                <div class="auth-menu__error" data-is-disabled>
+                    <p class="auth-menu__error__text"></p>
+                </div>
+                <div class="auth-menu__submit" id="auth-submit">
+                    <button>Login</button>
+                </div>
+            </form>
+        </div>
+    </template>
+
+    <template id="register-template">
+        <div id="register-menu" class="register-menu">
+            <form id="register-form" class="register-form">
+                <div class="register-menu__header">
+                    <p>Register</p>
+                </div>
+                <div class="register-menu__login">
+                    <input type="text" name="login" required minlength="3" placeholder="login">
+                </div>
+                <div class="register-menu__password">
+                    <input type="text" name="password" required minlength="6" placeholder="password">
+                </div>
+                <div class="register-menu__error" data-is-disabled>
+                    <p class="register-menu__error__text"></p>
+                </div>
+                <div class="register-menu__submit" id="register-submit">
+                    <button>Register</button>
+                </div>
+            </form>
+        </div>
+    </template>
+
+    <template id="message-template">
+        <div class="message-wrapper">
+            <div class="message" data-id>
+                <p class="message__text">
+                    temp text;
+                </p>
+                <p class="message__time">
+                    temp time
+                </p>
+            </div>
+        </div>
+    </template>
+
+    <template id="main-app-template">
         <div class="side-panel" id="side-panel" data-enabled="false">
             <div class="toggle-button-wrapper">
                 <button class="side-panel-toggle" id="side-panel-disable"></button>
@@ -70,19 +150,7 @@
                 </div>
             </div>
         </div>
-        <template id="message-template">
-            <div class="message-wrapper">
-                <div class="message" data-id>
-                    <p class="message__text">
-                        temp text;
-                    </p>
-                    <p class="message__time">
-                        temp time
-                    </p>
-                </div>
-            </div>
-        </template>
-    </div>
+    </template>
 </body>
 
 </html>
